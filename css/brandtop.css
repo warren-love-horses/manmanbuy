@@ -145,6 +145,7 @@ header .header-nav .nav-tabs li.active a {
   line-height: 40px;
   text-align: left;
   padding: 0 8px;
+  font-weight: bolder;
 }
 
 .brandtoplist .topItem ul li {
@@ -209,8 +210,204 @@ header .header-nav .nav-tabs li.active a {
   background: #8adf5b;
 }
 
+.star {
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.star::after {
+  content: "\e007\e007\e007\e007\e007";
+  font-family: "Glyphicons Halflings";
+  font-size: 18px;
+  color: #ea3900;
+}
+
+.star .star-percent {
+  position: absolute;
+  font-size: 18px;
+  width: 90px;
+  height: 18px;
+  z-index: 99;
+}
+
+.sellTop .sellTop-title {
+  height: 40px;
+  color: #874604;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background: #eee;
+  line-height: 40px;
+  text-align: left;
+  padding: 0 8px;
+  font-weight: bolder;
+}
+
+.sellTop .sellTopItem ul li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px;
+}
+
+.sellTop .sellTopItem ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sellTop .sellTopItem ul li a img {
+  width: 8.125rem;
+  height: 8.125rem;
+}
+
+.sellTop .sellTopItem ul li a .info {
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 8px;
+}
+
+.sellTop .sellTopItem ul li a .info .item-title {
+  color: #333333;
+  line-height: 22px;
+  min-height: 44px;
+}
+
+.sellTop .sellTopItem ul li a .info .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sellTop .sellTopItem ul li a .info .price span:nth-of-type(1) {
+  font-size: 18px;
+  color: #ea3900;
+}
+
+.sellTop .sellTopItem ul li a .info .price .star {
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.sellTop .sellTopItem ul li a .info .price .star::after {
+  content: "\e007\e007\e007\e007\e007";
+  font-family: "Glyphicons Halflings";
+  font-size: 18px;
+  color: #ea3900;
+}
+
+.sellTop .sellTopItem ul li a .info .price .star .star-percent {
+  position: absolute;
+  font-size: 18px;
+  width: 90px;
+  height: 18px;
+  z-index: 99;
+}
+
+.sellTop .sellTopItem ul li a .info .other {
+  font-size: 12px;
+  color: #999999;
+}
+
+.sellTop .sellTopItem ul li a .info .other em {
+  font-style: normal;
+  margin-right: 10px;
+}
+
+.com .com-title {
+  height: 40px;
+  color: #874604;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background: #eee;
+  line-height: 40px;
+  text-align: left;
+  padding: 0 8px;
+  font-weight: bolder;
+}
+
+.com .comItem {
+  background: #f2f2f2;
+  padding-bottom: 25px;
+}
+
+.com .comItem ul li {
+  position: relative;
+}
+
+.com .comItem ul li .pro-title {
+  margin-bottom: 10px;
+}
+
+.com .comItem ul li .pro-title .pic {
+  padding: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+.com .comItem ul li .pro-title .tit {
+  color: #999999;
+  line-height: 22px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.com .comItem ul li .com-box {
+  margin: 10px;
+  margin-top: 55px;
+  background: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  top: 40px;
+}
+
+.com .comItem ul li .com-box:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 29px;
+  top: 102px;
+  border-bottom: 8px solid #e7e7e7;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.com .comItem ul li .com-box .name {
+  color: #4f6900;
+  font-size: 14px;
+}
+
+.com .comItem ul li .com-box .name span:nth-of-type(1) {
+  float: left;
+}
+
+.com .comItem ul li .com-box .name .star {
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+.com .comItem ul li .com-box .name i {
+  color: #999999;
+  float: right;
+  font-style: normal;
+}
+
+.com .comItem ul li .com-box .com-content {
+  color: #000000;
+  margin-top: 10px;
+  line-height: 22px;
+  font-size: 15px;
+}
+
 .footer {
-  margin-top: 25px;
+  background: #f2f2f2;
 }
 
 .footer > .footer-nav {

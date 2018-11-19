@@ -19,6 +19,7 @@ $(function(){
        url:'http://193.112.55.79:9090/api/getbrandtitle',
        dataType:'jsonp',
        success:function(res){
+           console.log(res);
             var obj ={list:res.result} ;
             var html = template('brandTemp',obj);
             $('.brandItem ul').html(html);

@@ -53,11 +53,30 @@
             </div>
             <div class="topItem">
                 <ul>
+
+                </ul>
+            </div>
+        </div>
+        <div class="sellTop">
+            <div class="sellTop-title">
+                平板电视销量排行榜
+            </div>
+            <div class="sellTopItem">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div class="com">
+            <div class="com-title">
+                平板电视最有用评论
+            </div>
+            <div class="comItem">
+                <ul>
                     
                 </ul>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer ">
             <ul class="footer-nav">
                 <li><a href="#">登录</a></li>
                 <li><a href="#">注册</a></li>
@@ -82,7 +101,7 @@
     <script type="text/template" id="brandTemp">
         {{each list as value index}}
             <li>
-                <a href="./prolist.html?brandId" title="海信平板电视">
+                <a href="./prolist.html?brandId={{value.brandId}}" title="海信平板电视">
                     <span >{{index+1}}</span>
                     <div class="inner">
                         <div class="tittle-text">{{value.brandName}}</div>
@@ -90,6 +109,51 @@
                     </div>
                 </a>
             </li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="sellTopTemp">
+        {{each list as value index}}
+            <li>
+                <a href="bijia.html?id=" title="{{value.productName}}">
+                    <div class="pic"> 
+                            {{#value.productImg}}
+                    </div>
+                    <div class="info">
+                        <div class="item-title">{{value.productName}}</div>
+                         <div class="price">
+                            <span>{{value.productPrice}}</span> 
+                            <span class="star">
+                                <em class="star-percent"></em>
+                            </span>
+                        </div>
+                     <div class="other"><em>{{value.productQuote}}</em><em>全网{{value.productCom}}</em></div>
+                    </div> 
+                </a> 
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="comTemp">
+        {{each list as value index}}
+        <li >
+            <a href="bijia.aspx?id=342111">
+                <div class="pro-title">
+                    <div class="pic"> <img src="http://pro.zuyushop.com:8015/ProPic/20155/small80/Thumb_2015050011162642417.jpg"
+                            width="80" alt="创维(skyworth) 43M6 43英寸 超高清 智能网络LED液晶电视"> 
+                    </div>
+                    <div class="tit">创维(skyworth) 43M6 43英寸 超高清 智能网络LED液晶电视</div>
+                </div>
+            </a>
+            <div class="com-box">
+                <div class="name ">
+                    <span>{{value.comName}}</span>
+                    <span class="star">
+                        <em class="star5"></em>
+                    </span>
+                    <i>{{value.comTime}}</i>
+                </div>
+                <div class="com-content ">{{value.comContent}}</div>
+            </div>
+        </li>
         {{/each}}
     </script>
     <script src="./js/brandtop.js"></script>
