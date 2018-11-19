@@ -21,7 +21,7 @@ $(function(){
        success:function(res){
             var obj ={list:res.result} ;
             var html = template('brandTemp',obj);
-            $('.brandItem').html(html);
+            $('.brandItem ul').html(html);
        }
    })
    /*绑定移动端的tap事件*/

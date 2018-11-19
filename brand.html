@@ -1,18 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>功能界面</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/brand.css">
-    
+
 </head>
+
 <body>
-    <div class="layout" >
+    <div class="layout">
         <header>
             <div class="head-searchbox">
                 <a href="#" class="logo">
@@ -20,25 +22,25 @@
                 </a>
                 <form>
                     <div class="form-group" id="search">
-                        <input type="text" class="form-control"  placeholder="商品比价、查历史价">
+                        <input type="text" class="form-control" placeholder="商品比价、查历史价">
                     </div>
                 </form>
                 <div class="download">
-                    <a href="#" >下载</a>
+                    <a href="#">下载</a>
                 </div>
             </div>
             <div class="header-nav">
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="./brandtop.html">首页</a></li>
-                    <li role="presentation"><a href="./brandtop.html" >省钱控</a></li>
+                    <li role="presentation"><a href="./brandtop.html">省钱控</a></li>
                     <li role="presentation"><a href="./brandtop.html">查历史价</a></li>
                     <li role="presentation"><a href="./brandtop.html">比价搜索</a></li>
                     <li role="presentation"><a href="./brandtop.html">国内折扣</a></li>
                     <li role="presentation"><a href="./brandtop.html">白菜价</a></li>
                     <li role="presentation"><a href="./brandtop.html">小时风云榜</a></li>
-                </ul>   
+                </ul>
             </div>
-         
+
         </header>
         <div class="nav-top">
             <a href="#">首页 &nbsp> </a>
@@ -46,10 +48,12 @@
         </div>
         <div class="brandlist">
             <div class="list-title">
-                    热门品牌排行榜
+                热门品牌排行榜
             </div>
             <div class="brandItem">
-            
+                <ul>
+                    
+                </ul>
             </div>
         </div>
         <div class="footer">
@@ -64,7 +68,7 @@
                     <a href="#">慢慢买手机版 <span>-- 掌上比价平台</span></a>
                 </p>
                 <p>m.manmanbuy.com</p>
-               
+
             </div>
         </div>
     </div>
@@ -76,12 +80,15 @@
     <script src="./js/template.js"></script>
     <script type="text/template" id="brandTemp">
         {{each list as value index}}
+           <li>
             <a href="./brandtop.html?brandtitleid={{value.brandTitleId}}">
                 {{value.brandTitle}}
                 <span class="glyphicon glyphicon-menu-right"></span>
             </a>
+        </li>
         {{/each}}
     </script>
     <script src="./js/brand.js"></script>
 </body>
+
 </html>

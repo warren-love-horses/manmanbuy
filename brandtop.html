@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>功能界面</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/brandtop.css">
+
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="head-banner">
+                <img src="./images/header_logo.png" alt="">
+                <img src="./images/header_app.png" alt="">
+            </div>
+            <div class="head-searchbox">
+                <form>
+                    <div class="form-group" id="search">
+                        <input type="text" class="form-control" placeholder="请输入你想比价的商品">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="header-nav">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="./brandtop.html">首页</a></li>
+                    <li role="presentation"><a href="./brandtop.html">省钱控</a></li>
+                    <li role="presentation"><a href="./brandtop.html">查历史价</a></li>
+                    <li role="presentation"><a href="./brandtop.html">比价搜索</a></li>
+                    <li role="presentation"><a href="./brandtop.html">国内折扣</a></li>
+                    <li role="presentation"><a href="./brandtop.html">白菜价</a></li>
+                    <li role="presentation"><a href="./brandtop.html">小时风云榜</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <div class="nav-top">
+            <a href="#">首页 &nbsp> </a>
+            <a href="#">全部分类</a>
+        </div>
+        <div class="brandtoplist">
+            <div class="list-title">
+                热门品牌排行榜
+            </div>
+            <div class="topItem">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="footer-nav">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
+            </ul>
+            <div class="footer-text">
+                <p>
+                    <a href="#">手机App下载</a>
+                    <a href="#">慢慢买手机版 <span>-- 掌上比价平台</span></a>
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/iscroll.js"></script>
+    <script src="./js/tap.js"></script>
+    <script src="./js/template.js"></script>
+    <script type="text/template" id="brandTemp">
+        {{each list as value index}}
+            <li>
+                <a href="./prolist.html?brandId" title="海信平板电视">
+                    <span >{{index+1}}</span>
+                    <div class="inner">
+                        <div class="tittle-text">{{value.brandName}}</div>
+                        <p>{{value.brandInfo}}</p>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script src="./js/brandtop.js"></script>
+</body>
+
+</html>

@@ -1,10 +1,32 @@
-body {
-  background-color: #f2f2f2;
-}
-
 header {
   background-color: #ccc;
-  height: 85px;
+  height: 125px;
+}
+
+header .head-banner {
+  height: 40px;
+  background-color: #ff841d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .head-banner img:nth-of-type(1) {
+  width: 140px;
+  height: 20px;
+  padding-left: 10px;
+}
+
+header .head-banner img:nth-of-type(2) {
+  width: 40px;
+  height: 30px;
+  padding-right: 10px;
 }
 
 header .head-searchbox {
@@ -18,20 +40,6 @@ header .head-searchbox {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-header .head-searchbox .logo {
-  display: block;
-  width: 27%;
-  height: 35px;
-}
-
-header .head-searchbox .logo img {
-  max-width: 100%;
-  max-height: 24px;
-  width: auto;
-  display: block;
 }
 
 header .head-searchbox form {
@@ -39,16 +47,16 @@ header .head-searchbox form {
       -ms-flex: 1;
           flex: 1;
   width: 100%;
-  padding-right: 3%;
+  padding-right: 20%;
+  position: relative;
 }
 
 header .head-searchbox form #search {
   width: 100%;
   margin-top: -3px;
-  position: relative;
 }
 
-header .head-searchbox form #search input {
+header .head-searchbox form #search > input {
   height: 28px;
   width: 100%;
   border: none;
@@ -57,34 +65,23 @@ header .head-searchbox form #search input {
   background-color: #f9f9f9;
   -webkit-box-shadow: none;
           box-shadow: none;
-  padding-left: 30px;
 }
 
-header .head-searchbox form #search::before {
-  content: "";
-  width: 28px;
-  height: 28px;
-  display: block;
+header .head-searchbox form #search > div {
   position: absolute;
-  top: 2px;
-  left: 5px;
-  background-image: url(../images/icon_bar.png);
-  background-size: 150px 150px;
-  background-position-x: -23px;
+  top: -1px;
+  right: -12px;
+  height: 25px;
 }
 
-header .head-searchbox .download a {
-  margin-top: 2px;
-  float: right;
-  border: 1px solid #f04848;
-  height: 20px;
+header .head-searchbox form #search > div > button {
+  height: 100%;
+  line-height: 14px;
+  color: #fff;
+  border-color: none;
+  border: none;
   border-radius: 20px;
-  line-height: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
-  font-size: 11px;
-  text-align: center;
-  color: #f85000;
+  background-color: #ff841d;
 }
 
 header .header-nav {
@@ -140,36 +137,76 @@ header .header-nav .nav-tabs li.active a {
   font-size: 14px;
 }
 
-.brandlist .list-title {
-  height: 2.5rem;
+.brandtoplist .list-title {
+  height: 40px;
   color: #874604;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   background: #eee;
-  line-height: 2.5rem;
+  line-height: 40px;
   text-align: left;
-  padding: 0 0.5rem;
-  margin: 0.625rem 0.3125rem;
-}
-
-.brandlist .brandItem {
   padding: 0 8px;
 }
 
-.brandlist .brandItem ul a {
-  height: 2.5rem;
-  line-height: 2.5rem;
-  display: block;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-  font-weight: bold;
+.brandtoplist .topItem ul li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px;
+  position: relative;
 }
 
-.brandlist .brandItem ul a > span {
-  display: block;
-  float: right;
+.brandtoplist .topItem ul li::after {
+  content: "\e258";
+  font-family: "Glyphicons Halflings";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 6px;
+  font-size: 18px;
   color: #9f9f9f;
-  line-height: 2.5rem;
-  padding-right: 6px;
+}
+
+.brandtoplist .topItem ul li a {
+  display: block;
+}
+
+.brandtoplist .topItem ul li a span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: #c9c9c9;
+  color: #FFFFFF;
+  vertical-align: top;
+  margin: 0 10px 0 0;
+  font-size: 14px;
+}
+
+.brandtoplist .topItem ul li .inner {
+  display: inline-block;
+}
+
+.brandtoplist .topItem ul li .inner .tittle-text {
+  color: #000;
+  font-size: 16px;
+}
+
+.brandtoplist .topItem ul li .inner p {
+  font-size: 12px;
+  color: #999999;
+  margin-top: 3px;
+}
+
+.brandtoplist .topItem ul li:nth-of-type(1) a span {
+  background: #f10e0e;
+}
+
+.brandtoplist .topItem ul li:nth-of-type(2) a span {
+  background: #ff9314;
+}
+
+.brandtoplist .topItem ul li:nth-of-type(3) a span {
+  background: #8adf5b;
 }
 
 .footer {
@@ -207,4 +244,4 @@ header .header-nav .nav-tabs li.active a {
 .footer > .footer-text > p a:nth-of-type(1) {
   color: red;
 }
-/*# sourceMappingURL=brand.css.map */
+/*# sourceMappingURL=brandtop.css.map */

@@ -1,0 +1,235 @@
+// body{
+//     background-color: #f2f2f2;
+// }
+header{
+    background-color: #ccc;
+    height:125px;
+    .head-banner{
+        height: 40px;
+        background-color: #ff841d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        img:nth-of-type(1){
+            width: 140px;
+            height: 20px;
+            padding-left: 10px;
+        }
+        img:nth-of-type(2){
+            width: 40px;
+            height: 30px;
+            padding-right: 10px;
+        }
+    }
+    .head-searchbox{
+        width: 100%;
+        height: 44px;
+        display: flex;
+        padding: 10px 10px;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ddd;
+        form{
+            flex: 1;
+            width: 100%;
+            padding-right:20%; 
+            position: relative;
+            #search{
+                width: 100%;
+                margin-top:-3px; 
+                > input{
+                    height: 28px;
+                    width: 100%;
+                    border: none;
+                    border-color: transparent;
+                    border-radius: 20px;
+                    background-color: #f9f9f9;
+                    box-shadow: none;
+                }
+                > div{
+                    position: absolute;
+                    top: -1px;
+                    right:-12px;
+                    height: 25px;
+                    >button{
+                        height: 100%;
+                        line-height: 14px;
+                        color: #fff;
+                        border-color:none;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #ff841d;
+                    }
+                }
+            }
+          
+        }
+    }
+    .header-nav{
+        width: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        height: 40px;
+        padding:0px 4px; 
+        .nav-tabs {
+            border-bottom-color:transparent;
+            li {
+                margin-top: 7px;
+                box-sizing: border-box;
+                line-height:40px;
+                a {
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0px;
+                    padding: 5px 12px;
+                    font-weight: bolder;
+                    color: #000;
+                    font-size: 14px;
+                    
+                }
+                &:hover {
+                    border-bottom: 3px solid #f85000;
+                }
+                &.active {
+                    a {
+                        background-color: transparent;
+                        border: none;
+                        border-radius: 0px;
+                        color: #f85000;
+                        border-bottom: 3px solid #f85000;
+                    }
+                }
+            }
+           
+        }
+    }
+   
+}
+
+.nav-top{
+    width: 100%;
+    height: 36px;
+    background: linear-gradient(#fff,#ebebeb);
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: (8rem/16);
+    font-size: 14px;
+}
+.brandtoplist{
+    .list-title{
+        height: 40px;
+        color: #874604;
+        border-bottom: 1px solid #ccc;
+        background: #eee;
+        line-height: 40px;
+        text-align: left;
+        padding:0 8px;
+    }
+    .topItem{
+        ul{
+            li{
+                border-bottom: 1px solid #e7e7e7;
+                padding: 10px;
+                position: relative;
+                &::after{
+                    content: "\e258";
+                    font-family: "Glyphicons Halflings";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top:20px;
+                    right: 6px;
+                    font-size: 18px;
+                    color: #9f9f9f;
+
+                }
+                a{
+                    display: block;
+                    span{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        background: #c9c9c9;
+                        color: #FFFFFF;
+                        vertical-align: top;
+                        margin: 0 10px 0 0;
+                        font-size: 14px;
+                    }
+                }
+               
+                .inner{
+                    display: inline-block;
+                    .tittle-text{
+                        color: #000;
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 12px;
+                        color: #999999;
+                        margin-top: 3px;
+                    }
+                }
+            }
+            li:nth-of-type(1){
+                a{
+                    span{
+                        background:#f10e0e;
+                    }
+                }
+                
+            }
+            li:nth-of-type(2){
+                a{
+                    span{
+                        background:#ff9314;
+                    }
+                }
+            }
+            li:nth-of-type(3){
+                a{
+                    span{
+                        background:#8adf5b;
+                    }
+                }
+               
+            }
+          
+        }
+        
+    }
+}
+.footer{
+    margin-top:25px; 
+    >.footer-nav{
+        display: flex;
+        li{
+            flex: 1;
+            line-height: (34rem/16);
+            font-size: 14px;
+            text-align: center;
+            border-top:1px solid #c4c4c4;
+            border-bottom:1px solid #c4c4c4;
+            
+        }
+        li:nth-of-type(-n+2){
+            border-right:1px solid #c4c4c4;
+        }
+     
+    }
+    >.footer-text{
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 0;
+        color: #666;
+        > p{
+            a:nth-of-type(1){
+                color: red;
+
+            }
+        }
+    }
+}

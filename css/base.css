@@ -42,7 +42,7 @@ a:hover{
     color: #666;
     text-decoration: none;
 }
-ul{
+ul,li{
     list-style: none;
 }
 input{
