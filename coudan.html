@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>功能界面</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/coudan.css">
+
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="left">
+                <a href="" class="glyphicon glyphicon-menu-left"></a>
+            </div>
+            <div class="center">
+                <h1>凑单品</h1>
+            </div>
+            <div class="right clearfix">
+                <img src="./images/header_app.png" alt="">
+            </div>
+        </header>
+        <div class="coudan-box">
+            <div class="container coudan-nav">
+                <div class="row">
+                    <div class="dropdown col-xs-4">
+                        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            京东
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel" id="shopMess">
+                            <!-- <li class="active"><a href="javascript:;">京东</a></li>
+                            <li><a href="javascript:;">一号店</a></li>
+                            <li><a href="javascript:;">天猫超市</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="dropdown  col-xs-4">
+                        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            华北
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel" id="areaMess">
+                           
+                        </ul>
+                    </div>
+                    <div class="dropdown  col-xs-4">
+                        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            全部商品
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;">没有价格？</a></li>
+                            <li><a href="javascript:;">是的，没有</a></li>
+                            <li><a href="javascript:;">好的，那就不写</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search">
+                    <img src="./images/search.png" alt="">
+                </div>
+            </div>
+            <div class=" coudan-product">
+                <ul class="clearfix">
+                    <li>
+                        <a href="http://item.m.jd.com/ware/view.action?wareId=6963940" class="item border-img">
+                            <div class="pic">
+                                <img src="http://img10.360buyimg.com/n7/jfs/t19249/136/1326656480/58167/e60034f4/5ac33204N85fb466f.jpg">
+                            </div>
+                            <div class="title">精邦 线上测试请勿使用--定制 白色 s</div>
+                            <div class="other">
+                                <div class="price"><em>¥</em>0.10</div>
+                                <div class="gobtn">去凑单</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://item.m.jd.com/ware/view.action?wareId=6963940" class="item border-img">
+                            <div class="pic">
+                                <img src="http://img10.360buyimg.com/n7/jfs/t19249/136/1326656480/58167/e60034f4/5ac33204N85fb466f.jpg">
+                            </div>
+                            <div class="title">精邦 线上测试请勿使用--定制 白色 s</div>
+                            <div class="other">
+                                <div class="price"><em>¥</em>0.10</div>
+                                <div class="gobtn">去凑单</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://item.m.jd.com/ware/view.action?wareId=6963940" class="item border-img">
+                            <div class="pic">
+                                <img src="http://img10.360buyimg.com/n7/jfs/t19249/136/1326656480/58167/e60034f4/5ac33204N85fb466f.jpg">
+                            </div>
+                            <div class="title">精邦 线上测试请勿使用--定制 白色 s</div>
+                            <div class="other">
+                                <div class="price"><em>¥</em>0.10</div>
+                                <div class="gobtn">去凑单</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer ">
+            <ul class="footer-nav">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
+            </ul>
+            <div class="footer-text">
+                <p>
+                    <a href="#">手机App下载</a>
+                    <a href="#">慢慢买手机版 <span>-- 掌上比价平台</span></a>
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/template.js"></script>
+    <script type="text/template" id="coudanShopTemp">
+        {{each list as value index}}
+        <li class="{{index==0?'active':''}}" shopId={{value.shopId}}>
+            <a >{{value.shopName}}</a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="coudanAreaTemp">
+        {{each list as value index}}
+        <li class="{{index==0?'active':''}}" areaId={{value.areaId}}>
+            <a class="area" >{{value.areaName}}</a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="coudanTemp">
+        {{each list as value index}}
+            <li >
+                <a href="http://item.m.jd.com/ware/view.action?wareId=6963940" class="item border-img">
+                    <div class="pic">
+                        <img src="{{value.productImg}}">
+                    </div>
+                    <div class="title">{{value.productName}}</div>
+                    <div class="other">
+                        <div class="price">{{value.productPrice}}</div>
+                        <div class="gobtn">去凑单</div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <script src="./js/coudan.js"></script>
+</body>
+
+</html>
