@@ -1,6 +1,11 @@
 $(function () {
-    var brandtitleid = location.search.split('?')[1].slice(-1);
-
+    var urlData = location.search.split('?')[1].split('&');
+    var brandtitleid =urlData[0].split('=')[1];
+    var brandtitle = urlData[1].slice(11);
+    brandtitle = decodeURI(brandtitle).slice(0,-4);
+    $('.list-title').html(brandtitle+"哪个牌子好,十大品牌排行榜");
+    $('.sellTop-title').html(brandtitle+"销量排行榜");
+    $('.com-title').html(brandtitle+"最有用评论");
     $.ajax({
         type: 'post',
         url: 'http://193.112.55.79:9090/api/getbrand',
@@ -12,6 +17,7 @@ $(function () {
             var obj = {
                 list: res.result
             };
+            console.log(obj.list);
             var html = template('brandTemp', obj);
             $('.topItem ul').html(html);
         }
@@ -54,5 +60,10 @@ $(function () {
             }
         })
     }
+    $('#backTop').on('click',function(){
+        $("body,html").stop().animate({
+            "scrollTop": 0
+        }, 500);
+    })
    
 })

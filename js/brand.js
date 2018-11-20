@@ -38,6 +38,11 @@ $(function(){
      }
      li.classList.add('active');
  })
+ $('#backTop').on('click',function(){
+    $("body,html").stop().animate({
+        "scrollTop": 0
+    }, 500);
+})
    
 })
  

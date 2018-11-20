@@ -60,7 +60,7 @@
             <ul class="footer-nav">
                 <li><a href="#">登录</a></li>
                 <li><a href="#">注册</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
+                <li><a href="javascript:;" id="backTop"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
             </ul>
             <div class="footer-text">
                 <p>
@@ -81,7 +81,7 @@
     <script type="text/template" id="brandTemp">
         {{each list as value index}}
            <li>
-            <a href="./brandtop.html?brandtitleid={{value.brandTitleId}}">
+            <a href="./brandtop.html?brandtitleid={{value.brandTitleId}}&brandTitle={{value.brandTitle}}">
                 {{value.brandTitle}}
                 <span class="glyphicon glyphicon-menu-right"></span>
             </a>
