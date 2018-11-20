@@ -1,6 +1,7 @@
 header {
   background-color: #ccc;
   height: 125px;
+  width: 100%;
 }
 
 header .head-banner {

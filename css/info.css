@@ -42,12 +42,12 @@ ul {
   list-style: none;
 }
 
-span, img {
-  display: block;
-}
-
 a {
   color: #666;
+}
+
+span, img {
+  display: block;
 }
 
 .title {
@@ -142,11 +142,11 @@ a {
   margin: 0 auto;
 }
 
-.coudanpin div:nth-of-type(3) {
+.goumai {
   padding: 1.25rem 0.625rem;
 }
 
-.coudanpin div:nth-of-type(3) input {
+.goumai input {
   font-size: 1.23rem;
   border: none;
   display: block;

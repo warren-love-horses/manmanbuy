@@ -7,6 +7,7 @@ header {
   height: 85px;
   position: fixed;
   z-index: 99;
+  width: 100%;
 }
 
 header .head-searchbox {
@@ -221,6 +222,10 @@ header .header-nav .nav-tabs li.active a {
 
 .footer > .footer-text > p a:nth-of-type(1) {
   color: red;
+}
+
+header {
+  width: 100%;
 }
 
 header .head-searchbox form #search {

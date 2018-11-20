@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #f2f2f2;
 }
@@ -5,9 +6,6 @@ body {
 header {
   background-color: #ccc;
   height: 85px;
-  position: fixed;
-  z-index: 99;
-  width: 100%;
 }
 
 header .head-searchbox {
@@ -26,10 +24,8 @@ header .head-searchbox {
 
 header .head-searchbox .logo {
   display: block;
-  width: 65px;
+  width: 27%;
   height: 35px;
-  margin-top: 5px;
-  margin-right: 5px;
 }
 
 header .head-searchbox .logo img {
@@ -43,18 +39,19 @@ header .head-searchbox form {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
   padding-right: 3%;
 }
 
 header .head-searchbox form #search {
-  width: 48%;
+  width: 100%;
   margin-top: -3px;
   position: relative;
 }
 
 header .head-searchbox form #search input {
   height: 28px;
-  width: 180%;
+  width: 100%;
   border: none;
   border-color: transparent;
   border-radius: 20px;
@@ -75,12 +72,6 @@ header .head-searchbox form #search::before {
   background-image: url(../images/icon_bar.png);
   background-size: 150px 150px;
   background-position-x: -23px;
-}
-
-header .head-searchbox .download {
-  position: absolute;
-  left: 88%;
-  float: right;
 }
 
 header .head-searchbox .download a {
@@ -120,7 +111,7 @@ header .header-nav .nav-tabs li a {
   background-color: transparent;
   border: none;
   border-radius: 0px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   font-weight: bolder;
   color: #000;
   font-size: 14px;
@@ -138,58 +129,86 @@ header .header-nav .nav-tabs li.active a {
   border-bottom: 3px solid #f85000;
 }
 
-.nav-top {
+.view {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 详情列表页部分开始 */
+.content {
+  background-color: #fff;
+  list-style: none;
+}
+
+.content ul .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content ul .item .pic img {
+  display: block;
   width: 100%;
-  height: 36px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
-  background: linear-gradient(#fff, #ebebeb);
-  border-top: solid 1px #ebebeb;
-  border-bottom: 1px solid #ccc;
-  line-height: 36px;
-  padding-left: 0.5rem;
-  font-size: 14px;
-  position: relative;
-  top: 85px;
+  background-size: 100%;
 }
 
-.brandlist {
-  margin-top: 93px;
-}
-
-.brandlist .list-title {
-  height: 2.5rem;
-  color: #874604;
-  border: 1px solid #ccc;
-  background: #eee;
-  line-height: 2.5rem;
-  text-align: left;
-  padding: 0 0.5rem;
-  margin: 0.625rem 0.3125rem;
-}
-
-.brandlist .brandItem {
-  padding: 0 8px;
-}
-
-.brandlist .brandItem ul a {
-  height: 2.5rem;
-  line-height: 2.5rem;
-  display: block;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-  font-weight: bold;
-}
-
-.brandlist .brandItem ul a > span {
-  display: block;
+.content ul .item .inf {
   float: right;
-  color: #9f9f9f;
-  line-height: 2.5rem;
-  padding-right: 6px;
+  padding: 10px;
 }
 
+.content ul .item .inf .tit {
+  font-size: 16px;
+}
+
+.content ul .item .inf .price {
+  margin-top: 5px;
+  color: red;
+  font-size: 16px;
+}
+
+.content ul .item .inf .other {
+  margin-top: 5px;
+  color: #929292;
+  font-size: 12px;
+}
+
+/* 详情列表页部分结束 */
+/* 分页部分开始 */
+.paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 22px 0;
+  background-color: #f2f2f2;
+  padding-bottom: 20px;
+}
+
+.paging .pageNumber {
+  width: 130px;
+  padding-left: 32px;
+  font-size: 21px;
+}
+
+.paging .previousPage,
+.paging .nextPage {
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 3px 2px 3px 3px #fff;
+          box-shadow: 3px 2px 3px 3px #fff;
+}
+
+/* 分页部分结束 */
 .footer {
-  margin-top: 25px;
+  background: #f2f2f2;
 }
 
 .footer > .footer-nav {
@@ -223,4 +242,4 @@ header .header-nav .nav-tabs li.active a {
 .footer > .footer-text > p a:nth-of-type(1) {
   color: red;
 }
-/*# sourceMappingURL=brand.css.map */
+/*# sourceMappingURL=details.css.map */

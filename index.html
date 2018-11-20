@@ -149,7 +149,7 @@
 <script type="text/template" id="zhekou">
     {{each list value index}}
     <li id={{value.productId}}>
-            <a href="info.html?id={{value.productId}}" id="{{value.productId}}">
+            <a href="info.html?id={{value.productId}}&inpageid={{index}}" id="{{value.productId}}">
                     <div class="zk-pic">
                         {{if winW >768}}
                             {{@value.productImgLg}}

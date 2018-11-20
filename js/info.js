@@ -11,11 +11,11 @@ $(function () {
         },
         dataType: 'json',
         success: function (res) {   
-           
+        //    console.log(res.result);
            var list = res.result[id];
-           console.log(list);
+        //    console.log(list);
            var html = template("coudan",{list:list});
-           console.log(html);
+        //    console.log(html);
            $('.coudanpin').html(html);
 
            var html2 = template("pinglun",{list:list});
@@ -23,6 +23,7 @@ $(function () {
            $('.pinglunqu').html(html2);
         }
     })
+    
 
     $(".goTop").on("click",function(){
         console.log(111);
@@ -34,7 +35,7 @@ $(function () {
     })
 
     $(".title").on('click','.houtui',function(){
-        location.href='inlanddiscount.html';
+        location.href='index.html';
     })
     
 })

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类详情界面</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/details.css">
+
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="head-searchbox">
+                <a href="#" class="logo">
+                    <img src="./images/mlogo.png" alt="">
+                </a>
+                <form>
+                    <div class="form-group" id="search">
+                        <input type="text" class="form-control" placeholder="商品比价、查历史价">
+                    </div>
+                </form>
+                <div class="download">
+                    <a href="#">下载</a>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="./brandtop.html">首页</a></li>
+                    <li role="presentation"><a href="./brandtop.html">省钱控</a></li>
+                    <li role="presentation"><a href="./brandtop.html">查历史价</a></li>
+                    <li role="presentation" class="active"><a href="./brandtop.html">比价搜索</a></li>
+                    <li role="presentation"><a href="./brandtop.html">国内折扣</a></li>
+                    <li role="presentation"><a href="./brandtop.html">白菜价</a></li>
+                    <li role="presentation"><a href="./brandtop.html">小时风云榜</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!-- 身体部分开始 -->
+        <div class="view">
+            <!-- 详情列表页开始 -->
+            <div class="content">
+                <ul>
+                    <!-- particulars模板渲染 -->
+                </ul>
+            </div>
+            <!-- 详情列表页结束 -->
+
+            <!-- 分页部分开始 -->
+            <div class="paging">
+                <div class="previousPage">上一页</div>
+                <select class="pageNumber"></select>
+                <div class="nextPage">下一页</div>
+            </div>
+            <!-- 分页部分结束 -->
+
+
+
+            <div class="footer ">
+                    <ul class="footer-nav">
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="javascript:;" id="backTop"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
+                    </ul>
+                    <div class="footer-text">
+                        <p>
+                            <a href="#">手机App下载</a>
+                            <a href="#">慢慢买手机版 <span>-- 掌上比价平台</span></a>
+                        </p>
+                        <p>m.manmanbuy.com</p>
+        
+                    </div>
+                </div>
+
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./js/iscroll.js"></script>
+        <script src="./js/tap.js"></script>
+        <script src="./js/template.js"></script>
+        <script type="text/template" id="betailsTemp">
+            {{each list as value index}}
+<li class="item ui-border-b clearfix" id="{{value.productId}}" categoryId="{{value.categoryId}}">
+    <!-- <a href="./product_details.html" class="goto"></a> -->
+    <div class="pic">{{#value.productImg}}
+    </div>
+    <div class="inf">
+        <div class="tit">{{value.productName}}</div>
+        <div class="price">
+            {{value.productPrice}}
+        </div>
+        <div class="other clearfix">
+            <div class="mall f_left">{{value.productQuote}}</div>
+            <div class="sales f_right">{{value.productCom}}</div>
+        </div>
+    </div>
+</li>
+<a >
+    {{value.brandTitle}}
+        {{/each}}
+    </script>
+        <script src="./js/betails.js"></script>
+</body>
+
+</html>
