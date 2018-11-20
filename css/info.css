@@ -1,0 +1,354 @@
+html {
+  font-size: 16px;
+}
+
+@media screen and (device-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (device-width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (device-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+
+@media screen and (device-width: 414px) {
+  html {
+    font-size: 20.7px;
+  }
+}
+
+@media screen and (device-width: 768px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+
+@media screen and (device-width: 1182px) {
+  html {
+    font-size: 59.1px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+span, img {
+  display: block;
+}
+
+a {
+  color: #666;
+}
+
+.title {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.125rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff841d), to(#ff7f27));
+  background-image: linear-gradient(#ff841d, #ff7f27);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  color: white;
+  line-height: 3.125rem;
+}
+
+.title span:first-of-type {
+  height: 80%;
+}
+
+.title span:first-of-type::before {
+  font-size: 1.875rem;
+  position: absolute;
+  top: 0.3125rem;
+}
+
+.title span:nth-child(2) {
+  font-size: 1.5rem;
+}
+
+.title span:nth-child(3) img {
+  height: 2.1875rem;
+}
+
+.coudanpin {
+  margin-top: 3.125rem;
+  padding: 0.625rem;
+}
+
+.coudanpin h3 {
+  color: black;
+}
+
+.coudanpin p:nth-child(2) {
+  color: #999999;
+  font-size: 0.875rem;
+}
+
+.coudanpin div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coudanpin div:nth-of-type(1) span:nth-child(1) {
+  width: 90%;
+  font-size: 1rem;
+}
+
+.coudanpin div:nth-of-type(1) span:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coudanpin div:nth-of-type(1) span:nth-child(2) img {
+  height: 7.1875rem;
+}
+
+.coudanpin div:nth-of-type(2) {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+}
+
+.coudanpin div:nth-of-type(2) img {
+  margin: 0 auto;
+}
+
+.coudanpin div:nth-of-type(3) {
+  padding: 1.25rem 0.625rem;
+}
+
+.coudanpin div:nth-of-type(3) input {
+  font-size: 1.23rem;
+  border: none;
+  display: block;
+  width: 100%;
+  background: #ff7f27;
+  color: white;
+  text-align: center;
+  height: 2.5rem;
+  line-height: 1.875rem;
+}
+
+.xq-foot div:nth-child(1) {
+  width: 100%;
+  padding: 0.625rem;
+}
+
+.xq-foot div:nth-child(1) img {
+  width: 100%;
+}
+
+.footer {
+  background: #f1f1f1;
+}
+
+.footer .denglu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.875rem 0;
+  border: 1px solid #ccc;
+}
+
+.footer .denglu span {
+  width: 33.33333%;
+  text-align: center;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.footer .denglu span:nth-child(1) {
+  border-right: 1px solid #ccc;
+}
+
+.footer .denglu span:nth-child(2) {
+  border-right: 1px solid #ccc;
+}
+
+.footer .denglu span:nth-child(3) {
+  line-height: 1.625rem;
+}
+
+.footer .denglu span:nth-child(3)::before {
+  position: relative;
+  top: 0.125rem;
+}
+
+.footer .zuihou {
+  padding-bottom: 0.625rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.footer .zuihou div:nth-of-type(1) {
+  font-size: 0.8125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .zuihou div:nth-of-type(1) span:first-child {
+  color: Red;
+}
+
+.footer .zuihou div:nth-of-type(1) span:last-child {
+  color: #666666;
+  font-size: 0.875rem;
+}
+
+.footer .zuihou div:last-child {
+  color: #666666;
+  font-size: 0.75rem;
+}
+
+.pinglunqu .tit {
+  font-size: 1.25rem;
+  color: black;
+  margin-top: 0.9375rem;
+}
+
+.pinglunqu .reply .form {
+  border: 1px solid #ccc;
+  padding: 0;
+}
+
+.pinglunqu .reply .form textarea {
+  height: 6.25rem;
+  width: 100%;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.pinglunqu .reply .form .ctrl {
+  height: 2.5rem;
+}
+
+.pinglunqu .reply .form .ctrl input {
+  display: block;
+  border: 1px solid #ccc;
+  float: right;
+  height: 2.5rem;
+  background: #ff7f27;
+  color: white;
+  font-size: 1rem;
+  width: 6.25rem;
+}
+
+.pinglunqu .list ul {
+  padding-left: 0;
+}
+
+.pinglunqu .list ul .ui-border-b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pinglunqu .list ul .ui-border-b .userimg {
+  width: 25%;
+}
+
+.pinglunqu .list ul .ui-border-b .userimg img {
+  width: 100%;
+}
+
+.pinglunqu .list ul .ui-border-b .con {
+  padding: 0;
+  width: 75%;
+  font-size: 0.75rem;
+}
+
+.pinglunqu .list ul .ui-border-b .con .name {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pinglunqu .list ul .ui-border-b .con .name .username {
+  padding: 0;
+  width: 36%;
+}
+
+.pinglunqu .list ul .ui-border-b .con .name .time {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 64%;
+}
+
+.pinglunqu .list ul .ui-border-b .con .content {
+  font-size: 1rem;
+}
+
+.footer {
+  margin-top: 25px;
+  padding-top: 20px;
+}
+
+.footer > .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer > .footer-nav li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.125rem;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.footer > .footer-nav li:nth-of-type(-n+2) {
+  border-right: 1px solid #c4c4c4;
+}
+
+.footer > .footer-text {
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+
+.footer > .footer-text > p a:nth-of-type(1) {
+  color: red;
+}
+/*# sourceMappingURL=info.css.map */

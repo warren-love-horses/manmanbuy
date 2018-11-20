@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/info.css">
+</head>
+
+<body>
+    <header class="title">
+        <span class="glyphicon glyphicon-menu-left houtui"></span>
+        <span>国内折扣</span>
+        <span><img src="images/header_app.png" alt=""></span>
+    </header>
+    <div class="coudanpin">
+       
+    </div>
+    <div class="xq-foot">
+        <div>
+            <img src="images/mmbweixin2.png" alt="">
+        </div>
+        <div class="pinglunqu"></div>
+    </div>
+    <div class="footer">
+        <ul class="footer-nav">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="javascript:;" id="backTop"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
+        </ul>
+        <div class="footer-text">
+            <p>
+                <a href="#">手机App下载</a>
+                <a href="#">慢慢买手机版 <span>-- 掌上比价平台</span></a>
+            </p>
+            <p>m.manmanbuy.com</p>
+
+        </div>
+    </div>
+    <!-- <div class="footer">
+        <div class="denglu">
+            <span>登录</span>
+            <span>注册</span>
+            <span class="glyphicon glyphicon-arrow-up goTop">返回顶部</span>
+        </div>
+        <div class="zuihou">
+            <div>
+                <span>手机app下载</span>
+                <span>慢慢买手机版</span>
+                <span>--</span>
+                <span>掌上比较平台</span>
+            </div>
+            <div>
+                m.manmanbuy.com
+            </div>
+
+        </div>
+    </div> -->
+</body>
+
+</html>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="js/caidanlan.js"></script> -->
+<script src="js/template-web.js"></script>
+<script src="js/info.js"></script>
+<script type="text/template" id="coudan">
+
+
+            <h3>{{list.productName}}</h3>
+            <p>{{list.productFrom}} {{list.productTime}} {{list.productTips}}</p>
+            <div>
+                    <span>
+                           {{list.productInfo2}}
+                        </span>
+                        <span>
+                            {{@list.productImgSm}}
+                        </span>
+            </div>
+            <div>
+                <p>{{list.productInfo1}}</p>
+                {{@list.productImgSm}}
+               
+            </div>
+            <div>
+                    <input type="text" value="前往购买">
+                </div>
+        </div>
+</script>
+
+
+<script type="text/template" id="pinglun">
+
+    {{@list.productComment}}
+</script>
+

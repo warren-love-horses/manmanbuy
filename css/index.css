@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (device-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (device-width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (device-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+
+@media screen and (device-width: 414px) {
+  html {
+    font-size: 20.7px;
+  }
+}
+
+@media screen and (device-width: 768px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+
+@media screen and (device-width: 1182px) {
+  html {
+    font-size: 59.1px;
+  }
+}
+
+body {
+  background: #f1f1f1;
+}
+
+a, image {
+  color: #666;
+  display: block;
+  text-decoration: none;
+}
+
+.bodytitle {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.125rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff841d), to(#ff7f27));
+  background-image: linear-gradient(#ff841d, #ff7f27);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bodytitle img:nth-of-type(1) {
+  position: absolute;
+  width: 140px;
+  height: 20px;
+  padding-left: 10px;
+  left: 5px;
+}
+
+.bodytitle img:nth-of-type(2) {
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  padding-right: 10px;
+  position: absolute;
+  right: 5px;
+}
+
+.search {
+  margin-top: 3.125rem;
+  height: 3.125rem;
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  font-size: 0.75rem;
+}
+
+.search input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 1.25rem;
+  border: none;
+  padding-left: 0.9375rem;
+  background: #f1f1f1;
+}
+
+.search a {
+  width: 4.375rem;
+  margin-left: 0.625rem;
+  text-align: center;
+  line-height: 1.875rem;
+  height: 1.875rem;
+  background: #ff7f27;
+  border-radius: 1.25rem;
+  color: white;
+}
+
+.shangpinye {
+  margin-top: 0.625rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.625rem;
+}
+
+.shangpinye a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+.shangpinye a img {
+  width: 70%;
+}
+
+.shangpinye a p {
+  margin: 0.625rem 0;
+  font-size: 0.875rem;
+}
+
+.shangpinye a:hover, .shangpinye a:focus {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+.zhekou {
+  margin-top: 0.625rem;
+}
+
+.zhekou .zk-title {
+  padding: 0 0.625rem;
+  color: white;
+  font-size: 1.125rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffab3e), to(#ff9205));
+  background-image: linear-gradient(#ffab3e, #ff9205);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zhekou .zk-title span:last-of-type {
+  padding-top: 0.5rem;
+}
+
+.zhekou .zk-shangpin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+}
+
+.zhekou .zk-shangpin li {
+  background: white;
+  border: 0.0625rem solid #f1f1f1;
+}
+
+.zhekou .zk-shangpin li a {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.625rem;
+}
+
+.zhekou .zk-shangpin li a .zk-pic {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.zhekou .zk-shangpin li a .zk-pic > img {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+}
+
+.zhekou .zk-shangpin li a .zk-miaoshu {
+  float: left;
+  width: 65%;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.zhekou .zk-shangpin li a .zk-miaoshu div:nth-of-type(1) {
+  padding: 0.3125rem;
+  height: 70%;
+}
+
+.zhekou .zk-shangpin li a .zk-miaoshu div:nth-of-type(1) span:last-of-type {
+  color: #ff6c00;
+}
+
+.zhekou .zk-shangpin li a .zk-miaoshu div:nth-of-type(2) {
+  padding: 0.3125rem;
+  color: #b8b8b8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zhekou .zk-shangpin li a .zk-miaoshu div:nth-of-type(2) span:last-of-type {
+  display: block;
+  position: relative;
+  padding-left: 1.0625rem;
+}
+
+.zhekou .zk-shangpin li a .zk-miaoshu div:nth-of-type(2) span:last-of-type::before {
+  padding-top: 0.3125rem;
+  display: block;
+  content: "";
+  background: url(../images/comments.png) no-repeat;
+  background-size: 80%;
+  height: 1.0625rem;
+  width: 1.0625rem;
+  position: absolute;
+  left: 0;
+  top: 0.1875rem;
+}
+
+.zhekou .zk-shangpin li a:focus, .zhekou .zk-shangpin li a:hover {
+  text-decoration: none;
+}
+
+.zhekou .gengduo {
+  padding: 0 1.5625rem;
+  padding: 0.625rem;
+  background: white;
+}
+
+.zhekou .gengduo div {
+  display: block;
+  border: 0.0625rem solid #f1f1f1;
+  font-size: 1.0625rem;
+  color: black;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.625rem;
+  text-align: center;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  -webkit-box-shadow: 0 0 1px  #ccc;
+          box-shadow: 0 0 1px  #ccc;
+}
+
+.index-footer .title {
+  padding: 0 0.625rem;
+  color: white;
+  font-size: 1.125rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffab3e), to(#ff9205));
+  background-image: linear-gradient(#ffab3e, #ff9205);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.index-footer .title span:last-of-type {
+  padding-top: 0.125rem;
+}
+
+.index-footer .denglu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.875rem 0;
+  border: 1px solid #ccc;
+}
+
+.index-footer .denglu span {
+  width: 33.33333%;
+  text-align: center;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.index-footer .denglu span:nth-child(1) {
+  border-right: 1px solid #ccc;
+}
+
+.index-footer .denglu span:nth-child(2) {
+  border-right: 1px solid #ccc;
+}
+
+.index-footer .denglu span:nth-child(3) {
+  line-height: 1.625rem;
+}
+
+.index-footer .denglu span:nth-child(3)::before {
+  position: relative;
+  top: 0.125rem;
+}
+
+.index-footer .zuihou {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.index-footer .zuihou div:nth-of-type(1) {
+  font-size: 0.8125rem;
+}
+
+.index-footer .zuihou div:nth-of-type(1) span:first-child {
+  color: Red;
+}
+
+.index-footer .zuihou div:nth-of-type(1) span:last-child {
+  color: #666666;
+  font-size: 0.875rem;
+}
+
+.index-footer .zuihou div:last-child {
+  color: #666666;
+  font-size: 0.75rem;
+}
+
+.footer {
+  margin-top: 25px;
+  padding-top: 20px;
+}
+
+.footer > .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer > .footer-nav li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.125rem;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.footer > .footer-nav li:nth-of-type(-n+2) {
+  border-right: 1px solid #c4c4c4;
+}
+
+.footer > .footer-text {
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+
+.footer > .footer-text > p a:nth-of-type(1) {
+  color: red;
+}
+/*# sourceMappingURL=index.css.map */
