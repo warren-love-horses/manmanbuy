@@ -1,0 +1,263 @@
+
+.allheader{
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    top:(0rem/16);
+    left:0;
+   
+    .header{
+        width: 100%;
+        height: (44rem/16);
+        background-color: #f4483e;
+        line-height: (44rem/16);
+        display: flex;
+        padding: 0 (12rem/16);
+      
+        ._back{
+            span{
+                display: inline-block;
+                margin-top: (10rem/16);
+                font-size: (20rem/16);
+                color: #fff;
+                font-weight: 100;
+    
+            }
+        }
+        .header_title{
+            flex:1;
+            text-align: center;
+            color:#fff;
+            font-size: (18rem/16);
+        }
+        .download{
+            width: (26rem/16);
+            height: (38rem/16);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .baicainav{
+        width: 100%;
+        // height: (44rem/16);
+        border-bottom: (1rem/16) solid #eee;
+        overflow: hidden;
+        padding-left:(4rem/16);
+        box-sizing: border-box;
+        background-color: #fff;
+        // position: fixed;
+        // z-index: 998;
+        // top:40rem/16;
+        
+        >ul{
+            width: (1000rem/16);
+            height: (44rem/16);
+            line-height: (44rem/16);
+            li{
+                float: left;
+                padding: 0 (12rem/16);
+               
+               
+                span{
+                    color:#444;
+                    text-decoration: none;
+                    font-size: (14rem/16)
+                    
+                }
+                
+            }
+            li:hover{
+                border-bottom: (2rem/16)  solid #f4483e;
+                span:hover{
+                    color:#f4483e;
+                }
+    
+            }
+            .active{
+                span{
+                    color:#f4483e;
+                }
+                border-bottom: (2rem/16)  solid #f4483e;
+            }
+        }
+    }
+}
+
+.baicai_content{
+    position: relative;
+    top:(100rem/16);
+    .content{
+        width: 100%;
+        height: (120rem/16);
+        padding: (15rem/16) (6rem/16) (10rem/16);
+        display: flex;
+        ._left{
+           
+           
+            width: (90rem/16);
+            height: (90rem/16);
+            // padding-top: (5rem/16);
+            margin-right: (4rem/16); 
+            a{
+                width: 100%;
+                display: inline-block;
+            img{
+                width:100%;
+            }
+        }
+        
+        }
+        ._right{
+            width: (230rem/16);
+           .title{
+            //    margin-bottom:(3rem/16);
+            font-size: (10rem/16);
+               span{
+                   font-size: (10rem/16);
+                   color:#444;
+               }
+           }
+           .sale{
+               display: inline-block;
+               color:#f4483e;
+               font-size: (16rem/16);
+            //    margin-bottom: (6rem/16);
+               em{
+                   font-size: (5rem/16);
+               }
+               del{
+                   color:#aaa;
+                   font-size: (6rem/16);
+                //    text-decoration: line-through;
+               }
+           }
+         .bar{
+             margin-bottom: (5rem/16);
+             i{
+                 display: inline-block;
+                 width: (80rem/16);
+                 height: (12rem/16);
+                 border-radius: (12rem/16)/2;
+                //  border: 1rem/16 solid #f4483e;
+                 line-height:(12rem/16); 
+                 text-align: center;
+                 background-color: rgb(236, 134, 134);
+                 font-size: (4rem/16);
+                 color: #fff;
+                 position: relative;
+                 
+                 
+                em{
+                    position: absolute;
+                    bottom:0;
+                    left: (1em/16);
+                    width: (60rem/16);
+                    height: (11rem/16);
+                    background-color: #f4483e;
+                    border-radius: (12rem/16)/2;
+                } 
+                span{
+                    // line-height:(3rem/16);
+                    position: absolute;
+                }
+             }
+             .b{
+                 font-size: 8rem/16;
+                 color: #f4483e;
+             }
+
+            }
+            .saves{
+                position: relative;
+                .tap{
+                    display: inline-block;
+                    font-size: (10rem/16);
+                    width: (82rem/16);
+                    height: (20rem/16);
+                    text-align: center;
+                    border: (1rem/16) solid #f4483e;
+                    color: #f4483e;
+                }
+                .line{
+                    position: absolute;
+                    right: 0;
+                    font-size: (10rem/16);
+                    background-color: #f4483e;
+                    color: #fff;
+                    width: (54rem/16);
+                    text-align: center;
+                    border-radius: (4rem/16);
+                    a{
+                        color: #fff;
+                    }
+                }
+
+            }  
+        }
+    }
+}
+.top{
+    width: (50rem/16);
+    height: (50rem/16);
+    background-color: #eee;
+    border-radius: 50%;
+    position:fixed;
+    right:(5rem/16);
+    bottom:(30rem/16);
+    text-align: center;
+    line-height: (50rem/16) ;
+    font-size: (35rem/16);
+    color: #ccc;
+    padding-top: (5rem/16);
+    padding-right:(5rem/16);
+    font-weight: 200;
+   
+}
+.footer {
+    margin-top:(100rem/16);
+    width: 100%;
+
+    position: relative;;
+    bottom: 0;
+    background: #f2f2f2;
+    >.footer-nav {
+        display: flex;
+
+
+        li {
+            flex: 1;
+            line-height: (34rem/16);
+            font-size: (14rem/16);
+            text-align: center;
+            border-top: (1rem/16) solid #c4c4c4;
+            border-bottom: (1rem/16) solid #c4c4c4;
+
+
+        }
+
+
+        li:nth-of-type(-n+2) {
+            border-right: (1rem/16) solid #c4c4c4;
+        }
+
+
+    }
+
+
+    >.footer-text {
+        text-align: center;
+        font-size: (12rem/16);
+        padding: 15rem/16 0;
+        color: #666;
+
+
+        >p {
+            a:nth-of-type(1) {
+                color: red;
+
+
+            }
+        }
+    }
+}

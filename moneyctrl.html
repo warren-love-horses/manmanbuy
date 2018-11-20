@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控 - 最新优惠</title>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/mbase.css">
+    <link rel="stylesheet" href="./css/mindex.css">
+</head>
+<body>
+   
+    <!-- 头部部分开始 -->
+    <header>
+        <div class="backtrack"> <a href="index.html"> < </a></div>
+        <h4>省钱控 - 最新优惠</h4>
+        <div class="home"><a href="javascript:;"><img src="./images/header_app.png" alt=""></a></div>
+    </header>
+    <!-- 头部部分结束 -->
+
+    <!-- 身体部分开始 -->
+    <div class="view">
+        <!-- 详情列表页开始 -->
+        <div class="content">
+            <ul >
+                <!-- particulars模板渲染 -->
+            </ul>
+        </div>
+        <!-- 详情列表页结束 -->
+
+        <!-- 分页部分开始 -->
+        <div class="paging">
+            <div class="previousPage">上一页</div>
+            <select class="pageNumber"></select>
+            <div class="nextPage">下一页</div>
+        </div>
+        <!-- 分页部分结束 -->
+
+        <!-- 底部导航部分开始 -->
+        <div class="navv">
+            <a href="index.html" class="clearfix">首页</a>&nbsp;&gt;&nbsp;省钱控
+            </div>
+        <!-- 底部导航部分结束 -->
+
+        <!-- 底部部分开始 -->
+        <footer>
+            <div class="nav">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="#"><img src="./images/top.jpg" alt=""><span>返回顶部</span></a>
+            </div>
+            <div class="download">
+                <p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台 </p>
+                <p> m.manmanbuy.com  </p>
+            </div>
+        </footer>
+        <!-- 底部部分结束 -->
+
+    </div>
+    <!-- 身体部分结束 -->
+    <script src="./js/template-web.js"></script>
+    <script src="./js/zepto.js"></script>
+    <script src="./js/mindex.js"></script>
+    <script type="text/template" id="particulars">
+        {{each result value index}}  
+            <li >
+                <a href="detail.html?id={{value.productId}}" class="clearfix">
+                   <div class="contentImg">{{@value.productImgSm}}</div>
+                   <div class="details">
+                       <p class="title">{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                   </div>
+                   <div class="content_more">
+                    <span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+                    <i class="review fa fa-twitch">&nbsp;{{ value.productComCountNum}}</i>
+                   </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+<script>
+  
+</script>
+</body>
+</html>

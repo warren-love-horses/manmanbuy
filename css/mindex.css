@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* 头部部分开始 */
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  height: 3.125rem;
+  background-color: #ff841d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  line-height: 3.125rem;
+  /* APP下载图 */
+}
+
+header .backtrack {
+  font-size: 1.5625rem;
+  text-indent: 0.625rem;
+}
+
+header h4 {
+  font-size: 1.5625rem;
+}
+
+header .home {
+  margin-top: 0.1875rem;
+}
+
+header .home > a {
+  display: block;
+  padding: 0.625rem 0.625rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+header .home > a img {
+  width: 100%;
+}
+
+/* 头部部分结束 */
+/* 身体部分开始 */
+.view {
+  max-width: 75rem;
+  margin: 0 auto;
+  position: relative;
+  top: 3.125rem;
+}
+
+/* 详情列表页部分开始 */
+.content {
+  background-color: #fff;
+}
+
+.content li {
+  padding: 0.875rem 0.5rem;
+  border-bottom: 0.0625rem solid #ccc;
+}
+
+.content li > a {
+  display: block;
+}
+
+.content li > a .contentImg {
+  width: 6.25rem;
+  height: 6.25rem;
+  float: left;
+}
+
+.content li > a .contentImg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.content li > a .details {
+  width: 100%;
+  min-height: 3.5625rem;
+}
+
+.content li > a .details .title {
+  font-size: 0.875rem;
+  padding-bottom: 1rem;
+}
+
+.content li > a .details .title > span {
+  color: #ff6c00;
+}
+
+.content li > a .content_more {
+  width: 100%;
+}
+
+.content li > a .content_more .mall {
+  float: left;
+  font-size: 0.75rem;
+}
+
+.content li > a .content_more .review {
+  font-size: 0.75rem;
+  float: right;
+}
+
+/* 详情列表页部分结束 */
+/* 分页部分开始 */
+.paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1.25rem 0;
+  background-color: #f2f2f2;
+}
+
+.paging .pageNumber {
+  width: 8.125rem;
+  padding-left: 2rem;
+  font-size: 0.875rem;
+}
+
+.paging .previousPage, .paging .nextPage {
+  width: 5.375rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  font-size: 0.875rem;
+  text-align: center;
+  border-radius: 0.375rem;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0.1875rem 0.125rem 0.1875rem 0.1875rem #fff;
+          box-shadow: 0.1875rem 0.125rem 0.1875rem 0.1875rem #fff;
+}
+
+/* 分页部分结束 */
+/* 底部导航部分开始 */
+.navv {
+  height: 2.25rem;
+  background-color: #ebebeb;
+  background: gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));
+  background: linear-gradient(top, #ffffff, #ebebeb);
+  background: linear-gradient(top, #ffffff, #ebebeb);
+  border-top: solid 0.0625rem #ebebeb;
+  border-bottom: 0.0625rem solid #ccc;
+  line-height: 2.25rem;
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.navv > a {
+  float: left;
+}
+
+/* 底部导航部分结束 */
+/* 底部部分开始 */
+footer {
+  background-color: #f2f2f2;
+}
+
+footer .nav {
+  font-size: 0.875rem;
+  background-color: #f2f2f2;
+  border-top: 0.0625rem solid #c4c4c4;
+  border-bottom: 0.0625rem solid #c4c4c4;
+  height: 2.125rem;
+  line-height: 2.125rem;
+  margin-top: 1.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .nav > a {
+  width: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-right: 0.0625rem solid #c4c4c4;
+}
+
+footer .nav > a img {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin-top: 0.5625rem;
+  margin-right: -1.6em;
+}
+
+footer .nav a:nth-of-type(3) {
+  border-right: none;
+}
+
+footer .download {
+  padding-bottom: 1.25rem;
+  padding-top: 0.625rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+footer .download p > a:nth-of-type(1) {
+  color: red;
+}
+
+/* 底部部分结束 */
+/*# sourceMappingURL=mindex.css.map */

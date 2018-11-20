@@ -1,0 +1,85 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  width: 100%;
+  height: 2.75rem;
+  background-color: #ff841d;
+  line-height: 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.75rem;
+}
+
+.header ._back span {
+  display: inline-block;
+  margin-top: 0.625rem;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 100;
+}
+
+.header .header_title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.header .download {
+  width: 1.625rem;
+  height: 2.375rem;
+}
+
+.header .download img {
+  width: 100%;
+}
+
+.main_content {
+  position: relative;
+  top: 2.75rem;
+  width: 100%;
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main_content .block {
+  width: 50%;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0.625rem;
+}
+
+.main_content .block a {
+  width: 7.5rem;
+  height: 1.875rem;
+  font-size: 0.875rem;
+  display: inline-block;
+  border-radius: 0.3125rem;
+  line-height: 1.875rem;
+  color: #000;
+}
+
+.main_content .block a .logo {
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+.main_content .block a .logo img {
+  width: 100%;
+}
+
+.main_content .block a:focus {
+  text-decoration: none;
+}
+/*# sourceMappingURL=smartnav.css.map */

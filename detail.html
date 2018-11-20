@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/mbase.css">
+    <link rel="stylesheet" href="./css/mindex.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+
+<body>
+    <!-- 头部部分开始 -->
+    <header>
+        <div class="backtrack">
+            <a href="moneyctrl.html">
+                < </a>
+        </div>
+        <h4>国内折扣</h4>
+        <div class="home">
+            <a href="javascript:;">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 头部部分结束 -->
+    
+    <form name="aspnetForm" method="post" action="d.aspx?id=365226&amp;f=weixinlist" id="aspnetForm">
+        
+    </form>
+     <!-- 底部导航部分开始 -->
+     <div class="navv">
+        <a href="index.html" class="clearfix">首页&nbsp;&gt;&nbsp;</a><a href="moneyctrl.html" class="clearfix">省钱控</a>&nbsp;&gt;&nbsp;国内折扣
+        </div>
+    <!-- 底部导航部分结束 -->
+     <!-- 底部部分开始 -->
+     <footer>
+        <div class="nav">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#"><img src="./images/top.jpg" alt=""><span>返回顶部</span></a>
+        </div>
+        <div class="download">
+            <p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台 </p>
+            <p> m.manmanbuy.com  </p>
+        </div>
+    </footer>
+    <!-- 底部部分结束 -->
+</body>
+<script src="./js/template-web.js"></script>
+<script src="./js/zepto.js"></script>
+<script src="./js/detail.js"></script>
+<script type="text/template" id="shoppingDetail">
+    {{each data value index}}  
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgwMzg1OTYxNmRkbp1hkyYtdv7CGPRTAdoyC45Zo3ilvQItBJwt7c/kXV0=">
+        </div>
+        <div>
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLhpMo/Auu3yMwBAqzetZ8DAuuIlY4FAtbl9+cKuzMvfqmTO0nDwWTZK8WOkEl5oyrQA7e1VW8d+pTR4RI=">
+        </div>
+        <div class="container">
+            <div class="cu-content">
+                <h3 class="title" style="min-height:25.6px;">{{value.productName}}</h3>
+                <h4 class="subtitle" style="height:20px;">{{value.productPinkage}}</h4>
+                <div class="info">
+                    <span class="mall">{{value.productFrom}}</span>
+                    <span class="addtime">{{value.productTime}}</span>
+                    <span class="author">{{value.productTips}}</span>
+                    <span class="author">
+                        <a href="#newcomment" style="color:#4682c5;">{{value.productComCount}}</a>
+                    </span>
+                </div>
+                <div class="content clearfix">
+                    <div class="picwrap">
+                        {{@value.productImgSm}}
+                    </div>
+                    <div class="conn">
+                        <!--内容开始-->
+                        <p>
+                            {{value.productInfo}}
+                        </p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            {{value.productInfo1}}
+                            <a href="https://s.click.taobao.com/GYU90Ow" target="_blank">优惠券立减2元</a>，实付5.5元包邮，除塑壳四件套外，还可获赠化妆镜1个，酒精消毒片8片，感兴趣的慢友可以考虑~
+                        </p>
+                        <p>
+                            <br>
+                        </p>
+                        <p style="text-align:center;">
+                            {{@value.productImgLg}}
+                        </p>
+                        <!--内容结束-->
+                    </div>
+                </div>
+                {{@value.productCity}}
+                <br>
+                <div class="golink">
+                    <a href="redirect.aspx?webid=0&amp;tourl=https%3a%2f%2fs.click.taobao.com%2fEnU90Ow&amp;y=cu&amp;cxid=365226" target="_blank"
+                        class="a-gobuy">
+                        <i class="fa fa-shopping-cart"></i>&nbsp;前往购买</a>
+                </div>
+            </div>
+            {{@value.productComment}}
+            <div class="Page_loading" style=" display:none;">
+                <em>
+                    <img src="http://cu.manmanbuy.com/images/loading.gif" width="32" height="32">
+                </em>
+                <span></span>
+            </div>
+        </div>
+        {{/each}}
+</script>
+</html>

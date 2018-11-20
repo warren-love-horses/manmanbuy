@@ -26,7 +26,6 @@ $(function(){
    })
    /*绑定移动端的tap事件*/
    var menuBox = document.querySelector('.header-nav ul');
-   console.log(menuBox);
    mobile.tap(menuBox,function(event){
     var li = event.target.parentNode;
     for(var i=0;i<lis.length;i++){

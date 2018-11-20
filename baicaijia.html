@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价-淘宝内部券</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/baicai.css">
+</head>
+
+<body>
+    <div class="allheader">
+    <div class="header">
+        <a href="./index.html" class="_back">
+            <span class="glyphicon glyphicon-menu-left"></span>
+        </a>
+
+        <span class="header_title">白菜价-淘宝内部券</span>
+        <a href="javascript:;" class="download">
+            <span class="download"><img src="./images/header_app.png" alt=""></span>
+        </a>
+    </div>
+    <div class="baicainav">
+        <ul class="header-nav">
+            <li class="active"><a href="">全部</a></li>
+            <li><a href="">热销</a></li>
+            <li><a href="">9块邮</a></li>
+            <li><a href="">数码家电</a></li>
+            <li><a href="">居家</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="baicai_content">
+       
+        <div class="content">
+                    <div class="_left fl">
+                        <a href="#"><img src="./images/haitao.png" alt=""></a>
+                    </div>
+                    <div class="_right">
+                        <div class="title"><a href="#">[包邮]双十一红包 今日开启</a></div>
+                        <span class="sale">
+                            <sub>￥</sub>0.0&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i>￥0</i>
+                        </span>
+                        <div class="bar">
+                            <span class="outbar">
+                                <span class="inlbar"></span>
+                                <span class="per">75%</span>
+        
+                            </span>
+        
+                            <span class="yet">已领82张</span>
+                        </div>
+                        <div class="saves">
+                            <span class="tap">点此领优惠券</span>
+                            <span class="line fr">下单链接</span>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div class="top">
+        <span class="glyphicon glyphicon-arrow-up"></span>
+    </div>
+    <div class="footer">
+        <ul class="footer-nav">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="javascript:;" id="backTop"><span class="glyphicon glyphicon-arrow-up"></span> 返回顶部</a></li>
+        </ul>
+        <div class="footer-text">
+            <p>
+                <a href="#">手机App下载</a>
+                <a href="#">慢慢买手机版 <span>-- 掌上比价平台</span></a>
+            </p>
+            <p>m.manmanbuy.com</p>
+
+
+        </div>
+    </div>
+        <script type="text/template" id="baicainav">
+        {{each list as value index}}
+        <li titleId={{value.titleId}}><span href="" >{{value.title}}<span></li>
+            {{/each}}
+    </script>
+        <script type="text/template" id="baiContent">
+            {{each list as value index}}
+            <div class="content">
+                <div class="_left fl">
+                    <a href="#">{{#value.productImg}}</a>
+                </div>
+                <div class="_right">
+                    <div class="title">{{#value.productName}}</div>
+                    <span class="sale">
+                        {{#value.productPrice}}
+                    </span>
+                    {{#value.productCouponRemain}}
+                    <div class="saves">
+                        <span class="tap">点此领优惠券</span>
+                        <span class="line fr">{{#value.productHref}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    </script>
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./js/template.js"></script>
+        <script src="./js/iscroll.js"></script>
+        <script src="js/baicai.js"></script>
+</body>
+
+</html>

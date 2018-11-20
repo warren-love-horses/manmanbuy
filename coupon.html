@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="./css/mbase.css">
+    <link rel="stylesheet" href="./css/coupon.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+</head>
+
+<body>
+    
+    <div class="view" id="top">
+        <!-- 头部logo -->
+        <header>
+            <a href="index.html" class="fa fa-angle-left"></a>
+            <h3>优惠券</h3>
+            <a href="javascript:;" class="login">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </header>
+        <!-- 内容 -->
+        <ul id="comment">
+
+        </ul>
+        <!-- 尾部 -->
+        <footer>
+            <!-- <div class="foot_top">
+                <div class="foot_top_left">
+                    <a href="javascript:;">登录</a>
+                </div>
+                <div class="foot_top_center">
+                    <a href="javascript:;">注册</a>
+                </div>
+                <div class="foot_top_right">
+                    <a href="#top">
+                        <span class="fa fa-arrow-up"></span>返回顶部</a>
+                </div>
+            </div> -->
+            <div class="foot_bottom">
+                <a href="javascript:;">
+                    <span>手机APP下载</span>
+                    慢慢买手机版 -- 掌上比价平台
+                </a>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+
+        <!-- JS部分 -->
+        
+        <script src="./lib/jquery/jquery.js"></script>
+        <script src="./js/template-web.js"></script>
+        <script type="text/template" id="list">
+            {{ each data value index }}
+            <li>
+                <a href="{{ value.couponLink }}?id={{ value.couponId }}">
+                <p><img src="{{ value.couponImg }}" alt="">{{ value.couponTitle
+                }}</p>
+                </a>
+            </li>
+            {{ /each }}
+        </script>
+        <script>
+            function loadingShow() {
+                $("#loading").show();
+            }
+            function loadingHide() {
+                $("#loading").hide();
+            }
+            $.ajax({
+                url: "http://193.112.55.79:9090/api/getcoupon",
+                type: "get",
+                dataType: "json",
+                beforeSend: function () {
+                    loadingShow();
+                },
+                success: function (res) {
+                    if (res) {
+                        loadingHide();
+                    }
+                    console.log(res.result);
+                    var htmlStr = template("list", {
+                        data: res.result
+                    })
+                    // console.log(htmlStr);
+                    $("#comment").html(htmlStr);
+                }
+            })
+
+
+        </script>
+</body>
+
+</html>

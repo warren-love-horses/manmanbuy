@@ -54,7 +54,7 @@ header .head-searchbox form #search {
 
 header .head-searchbox form #search input {
   height: 28px;
-  width: 100%;
+  width: 180%;
   border: none;
   border-color: transparent;
   border-radius: 20px;
@@ -79,7 +79,7 @@ header .head-searchbox form #search::before {
 
 header .head-searchbox .download {
   position: absolute;
-  left: 58%;
+  left: 88%;
   float: right;
 }
 

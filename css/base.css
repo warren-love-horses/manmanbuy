@@ -33,6 +33,10 @@ html,body,ul,li,img,a,p,div,form,input,h3{
     /*去除移动端特有的点击高亮效果*/
     -webkit-tap-highlight-color: transparent;
 }
+em,
+i {
+    font-style: normal
+}
 body{
     font-family: "微软雅黑",sans-serif;
     font-size: 13px;

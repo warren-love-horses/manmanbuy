@@ -1,0 +1,145 @@
+/*ҳ���ʼ����ʽ�ļ�*/
+@charset "UTF-8";
+/*我们约定将UI稿件按20份来划分*/
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 20.7px;
+  }
+}
+/*# sourceMappingURL=adapter.css.map */
+@import './adapter.css';
+/*�������߾�  */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+div,
+img,
+input,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+}
+/*������б�� ����б*/
+em,
+i {
+    font-style: normal
+}
+/*ȥ���б�ǰ���С��*/
+li {
+    list-style: none
+}
+/*ͼƬû�б߿�   ȥ��ͼƬ�ײ�Ŀհ׷�϶*/
+img,
+input {
+    border: 0;  /*ie6*/
+    vertical-align: middle
+}
+/*��button ��ť ���С��*/
+button {
+    cursor: pointer
+}
+/*ȡ�����ӵ��»���*/
+a {
+    color:#d3ba85;
+    text-decoration: none
+}
+
+
+button,
+input {
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif;
+    outline: none;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font-family:  Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none
+}
+/*�������*/
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+.pr {
+    position: relative;
+}
+
+/*ҳ���ı���ɫ��*/
+/* .col_red {
+    color: #c81623 !important;
+} */
+/*���� ���ж���*/
+/* .w {
+    margin: auto;
+    width: 1200px;
+} */
+
+
+/*��������ͼ����ʽ*/
+/*@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}*/
+
+/*���ö��������ͼ����ʽ*/
+.iconfont {
+    font-family: 'iconfont';
+    font-style: normal;
+}

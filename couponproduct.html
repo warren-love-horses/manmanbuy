@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券 </title>
+    <link rel="stylesheet" href="./css/mbase.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+</head>
+
+<body>
+    
+    <div class="layer">
+        <div class="box">
+            <div class="left fa fa-angle-left"></div>
+            <div class="conter">
+                <ul class="clearfix" style="transform: translateX(-200px);
+                transition: transform 1s;"></ul>
+            </div>
+            <div class="right fa fa-angle-right"></div>
+        </div>
+    </div>
+    <div class="view" id="top">
+        <!-- 头部logo -->
+        <header>
+            <a href="coupon.html" class="fa fa-angle-left"></a>
+            <h3>优惠券</h3>
+            <a href="javascript:;" class="login">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </header>
+        <!-- 内容 -->
+        <div style="width: 100%;padding: 10px 0;color: #ccc;text-align: center;">--点餐前出示手机的优惠券，即可享受优惠--</div>
+        <ul id="comment">
+
+        </ul>
+        <!-- 尾部 -->
+        <footer>
+            <div class="foot_top">
+                <div class="foot_top_left">
+                    <a href="javascript:;">登录</a>
+                </div>
+                <div class="foot_top_center">
+                    <a href="javascript:;">注册</a>
+                </div>
+                <div class="foot_top_right">
+                    <a href="#top">
+                        <span class="fa fa-arrow-up"></span>返回顶部</a>
+                </div>
+            </div>
+            <div class="foot_bottom">
+                <a href="javascript:;">
+                    <span>手机APP下载</span>
+                    慢慢买手机版 -- 掌上比价平台
+                </a>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+
+        <!-- JS部分 -->
+        <script src="./lib/jquery/jquery.js"></script>
+        <script src="./js/zepto.js"></script>
+        <script src="./js/template-web.js"></script>
+        <script type="text/template" id="list">
+            {{ each data value index }}
+            {{if index < 36}}
+            <li>
+                <input type="hidden" value="{{ value.couponProductId }}"> {{@value.couponProductImg}}
+                <div>
+                    <p>{{ value.couponProductName }}</p>
+                    <a href="javascript:;" class="fa fa-angle-right fr" style="font-size:30px; color:#5a5a5a;"></a>
+                    <p>{{ value.couponProductPrice }}</p>
+                    <span>{{ value.couponProductTime }}</span>
+                </div>
+            </li>
+            {{/if}}
+            {{ /each }}
+        </script>
+        <script>
+            function loadingShow() {
+                $("#loading").show();
+            }
+            function loadingHide() {
+                $("#loading").hide();
+            }
+
+            var id = window.location.search.split("=")[1] ? window.location.search.split("=")[1] : 0;
+            // console.log(id)
+            $.ajax({
+                url: "http://193.112.55.79:9090/api/getcouponproduct",
+                type: "get",
+                dataType: "json",
+                data: {
+                    couponid: id
+                },
+                beforeSend: function () {
+                    loadingShow();
+                },
+                success: function (res) {
+                    console.log(res.result)
+                    if (res) {
+                        loadingHide();
+                    }
+                    // console.log(res);
+                    var title = res.result[0].couponProductName.split("凭")[1];
+                    $("header h3").html(title);
+                    // console.log(title)
+                    var htmlStr = template("list", {
+                        data: res.result
+                    })
+                    // console.log(htmlStr);
+                    $("#comment").html(htmlStr);
+
+                    $("#comment li").each(function () {
+                        $(this).on("tap", function () {
+                            $(".layer").show();
+                            // console.log($(this).parent().children().first()[0]);
+                            var imgsrc = this.querySelector("img").src;
+                            // console.log(img)
+                            console.log(this);
+                            var img1 = $(this).prev()[0];
+                            var img2 = $(this).next()[0];
+                            var img1src;
+                            var img2src;
+                            if (img1) {
+                                img1src = img1.querySelector("img").src;
+                            } else {
+                                img1src = $(this).parent().children().last()[0].querySelector(
+                                    "img").src;
+                            }
+                            if (img2) {
+                                img2src = img2.querySelector("img").src;
+                            } else {
+                                img2src = $(this).parent().children().first()[0].querySelector(
+                                    "img").src;
+                            }
+
+                            var htmlStr1 = "";
+                            htmlStr1 += "<li>";
+                            htmlStr1 += "<img src='" + img1src + "'>";
+                            htmlStr1 += "</li>";
+                            htmlStr1 += "<li>";
+                            htmlStr1 += "<img src='" + imgsrc + "'>";
+                            htmlStr1 += "</li>";
+                            htmlStr1 += "<li>";
+                            htmlStr1 += "<img src='" + img2src + "'>";
+                            htmlStr1 += "</li>";
+                            htmlStr1 += "<li>";
+                            htmlStr1 += "<img src='" + img1src + "'>";
+                            htmlStr1 += "</li>";
+
+                            $(".conter ul").html(htmlStr1);
+
+                            // console.log($(".conter ul li img")[0]);
+
+                            var a = -($(".conter ul li img")[0].offsetWidth);
+                            var b = -200;
+                            // console.log(a);
+
+                            $(".layer .left").on("tap", function (e) {
+                                e.stopPropagation();
+                                $(".conter ul")[0].style.transition =
+                                    "transform 1s";
+                                b = b - a;
+                                $(".conter ul")[0].style.transform = "translateX(" +
+                                    b + "px)";
+                                // console.log(b)
+                                if (b == 0) {
+                                    $(".conter ul")[0].addEventListener(
+                                        "transitionend",
+                                        function () {
+                                            if (b == 0) {
+                                                $(".conter ul")[0].style.transition =
+                                                    "";
+                                                b = -600;
+                                                $(".conter ul")[0].style.transform =
+                                                    "translateX(" + b + "px)";
+                                            }
+                                        })
+
+                                }
+                            });
+                            $(".layer .right").on("tap", function (e) {
+                                e.stopPropagation();
+                                $(".conter ul")[0].style.transition =
+                                    "transform 1s";
+                                b = b + a;
+                                $(".conter ul")[0].style.transform = "translateX(" +
+                                    b + "px)";
+                                // console.log(b)
+                                if (b == -600) {
+                                    $(".conter ul")[0].addEventListener(
+                                        "transitionend",
+                                        function () {
+                                            if (b == -600) {
+                                                $(".conter ul")[0].style.transition =
+                                                    "";
+                                                b = 0;
+                                                $(".conter ul")[0].style.transform =
+                                                    "translateX(" + b + "px)";
+                                            }
+                                        })
+                                }
+                            });
+                            $(".layer .conter").on("tap", function (e) {
+                                e.stopPropagation();
+                            });
+                            $(".layer").on("tap", function () {
+                                $(".layer").hide();
+                            })
+                        })
+                    })
+
+
+                }
+            })
+        </script>
+</body>
+
+</html>
