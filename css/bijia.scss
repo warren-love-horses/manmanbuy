@@ -1,0 +1,56 @@
+@import 'brand.scss';
+header .head-searchbox form #search{
+    width: 85%;
+}
+header .head-searchbox .download{
+    left: 86%;
+}
+
+.bijia-menu{
+    padding-top:90px; 
+    .child-menu{
+        margin: 0 5px 5px 5px;
+        .panel-heading{
+            padding: 0;
+        }
+        .childmenu-title{
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left:10px; 
+            position: relative;
+            // &::after{
+            //     content: "";
+            //     width: 20px;
+            //     height: 20px;
+            //     background: url(../images/arrow2.gif) no-repeat;
+            //     transform: rotateZ(-180deg);
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            // }
+            // &:active{
+            //     &::after{
+            //         transition-duration: 5s;
+            //         transform: rotateZ(360deg);
+            //     }
+            // }
+        }
+      
+        .menu-item{
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            >div{
+                font-size: 1rem;
+                border-right: 1px solid #ccc;
+               border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+    .child-menu:nth-of-type(1){
+        margin-top: 5px;
+    }
+   
+}
